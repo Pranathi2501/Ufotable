@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ufotable - SignUp </title>
+    <link rel="icon" type="image/jpg" href="/images/logo.png">
+    
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+		html {
+			height: 100%;
+			margin: 0;
+			background:  #DFD3C3;
+		}
+
+		.container1 {
+			margin-top: 30px;
+			text-align:center;
+			width: 50%;
+		}
+
+		.container {
+
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+			/* justify-content: last baseline; */
+			background-color: #f0f1f5;
+			column-gap: 30px;
+		}
+
+		.container1 p {
+			padding-left:70px;
+			font-size: 18px;
+			line-height: 1.6;
+			
+			color: black;
+			
+			justify-content: center;
+			opacity: 0.5;
+		}
+
+		.container2 {
+
+			margin-top: 30px;
+			border-radius: 25px;
+
+			width: 38%;
+			margin-left: 60%;
+			margin-top: -450px;
+			position: sticky;
+			box-shadow: inset 20px 20px 20px #d9d9d9, inset -20px -20px 60px #ffffff;
+			color: #333
+		}
+
+		.container1 img {
+			padding-right:20px;
+			height: 45.3%;
+			width: 45.3%;
+			border-radius: 25px 25px 25px 25px;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 16px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #3498db;
+			color: #ffffff;
+			border-radius: 4px;
+			transition: background-color 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: #2980b9;
+		}
+
+		.form {
+			border-color: #333;
+			box-shadow: #333;
+			position: absolute;
+			max-width: 430px;
+			width: 100%;
+			padding: 50px;
+			border-radius: 35px;
+			background: #FFF;
+			margin-right: 5%;
+			background-color: #F8EDE3;
+			box-shadow: 0px 4px 8px rgb(159, 159, 159);
+			border-radius: 10px;
+			transition: box-shadow 0.3s, border-color 0.3s;
+		}
+
+		.form:hover {
+			box-shadow: 0px 4px 8px rgb(0, 0, 0);
+			border-color: rgb(0, 0, 0);
+			transform: scale(1.01);
+		}
+
+		header {
+			font-family: 'Playfair Display', serif;
+			font-size: 38px;
+			font-weight: 600;
+			color: #232836;
+			text-align: center;
+		}
+
+		form {
+			margin-top: 30px;
+		}
+
+		.form .field {
+			position: relative;
+			height: 50px;
+			width: 100%;
+			margin-top: 20px;
+			border-radius: 6px;
+		}
+
+		.field input,
+		.field button {
+			height: 100%;
+			width: 100%;
+			border: none;
+			font-size: 16px;
+			font-weight: 400;
+			border-radius: 6px;
+
+		}
+
+		.field input {
+			outline: none;
+			padding: 0 15px;
+			border: 1px solid#CACACA;
+		}
+
+		.field input:focus {
+			border-bottom-width: 2px;
+		}
+
+		.eye-icon {
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			font-size: 18px;
+			color: #8b8b8b;
+			cursor: pointer;
+			padding: 5px;
+		}
+
+		.field button {
+			color: #fff;
+			background-color: #8D493A;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			padding: 0 20px;
+
+			width: 460px;
+			height: 50px;
+		}
+
+		.field button:hover {
+			background-color:#D0B8A8;
+		}
+
+		.form-link {
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.form-link span,
+		.form-link a {
+			font-size: 14px;
+			font-weight: 400;
+			color: #232836;
+		}
+
+		.form a {
+			color: #0E429D;
+			text-decoration: none;
+		}
+
+		.form-content a:hover {
+			text-decoration: underline;
+		}
+
+		.line {
+			position: relative;
+			height: 1px;
+			width: 100%;
+			margin: 36px 0;
+			background-color: #d4d4d4;
+		}
+
+		.line::before {
+			content: 'Or';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #FFF;
+			color: #8b8b8b;
+			padding: 0 15px;
+		}
+
+		.register-heading {
+			color:  #8D493A;
+		}
+    </style>
+   </head> 
+<body>
+		<div th:replace="navbar.html"></div>
+		<div class="container1">
+		<img src="/images/logo.png" alt="Ufotable Logo" style="padding-left: 5%;">
+		<div class="containertext" >
+		
+	    <p>
+       	Welcome to Ufotable<br>
+		Join Ufotable to watch the latest movies, TV shows.<br>
+		With  Video Channels, find shows and movies from your favorite channels all in one place. <br>
+		Enjoy with an add-on subscription to Channels of your choice
+        </p>
+	</div>
+	</div>
+	<div class="container2">
+		<aside>
+			<div class="form signup">
+				<div class="form-content">
+					<div class="card-header">
+						<header class="register-heading">Register</header>
+					</div>
+					<form th:action="@{/register}" method="post">
+
+						<div class="field input-field">
+							<input type="text" placeholder="Name" class="input" name="name" th:required="required">
+						</div>
+
+						<div class="field input-field">
+							<input type="email" placeholder="Email" class="input"
+								pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+								title="Please enter a valid email address" name="email" th:required="required">
+						</div>
+
+						<div class="field input-field">
+							<input type="password" placeholder="Create password" class="password" pattern="^.{8,}$"
+								title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number"
+								name="password" th:required="required">
+						</div>
+
+						</div>
+						<div class="field input-field">
+							<input type="number" placeholder="Mobile Number" class="number" pattern="^.{10,}$"
+								title="Number must be  10 characters long "
+								name="phone" th:required="required">
+								</div>
+						<div class="field input-field">
+							<input type="text" placeholder="Address" class="input" name="address" th:required="required">
+						</div>
+						<br><br>
+						<label> Gender </label>
+						<br><br>
+								<input type="radio" name ="gender" value ="Male"> Male
+								<input type="radio" name ="gender" value ="Female"> Female
+								<input type="radio" name ="gender" value ="Other"> Other
+
+						<div class="field button-field">
+							<button>Signup</button>
+						</div>
+
+					</form>
+
+					<div class="form-link">
+						<!-- Add a dynamic message for registration success -->
+
+						<div th:if="${userSuccess}" style="color: green;">
+							Registration successful! Please login using your credentials.
+						</div>
+
+						<!-- Add a dynamic message for registration failure -->
+						<div th:if="${userExists}" style="color: red;">
+							User already exists! Please login using your credentials.
+						</div>
+
+						<span>Already have an account? <a th:href="@{/}" class="link login-link">Login</a></span>
+					</div>
+				</div>
+			</div>
+
+		</aside>
+	</div>
+</body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--
+        <form action="register" method = "post">
+			<label> Name </label>
+			<input type ="text" name="name">
+			<br><br>
+			<label> Email id </label>
+			<input type ="email" name="email" required>
+			<br><br>
+			<label> Password </label>
+			<input type="password" name="password">
+			<br><br>
+			<label> Phone Number</label>
+			<input type="number" name="phone">
+			<br><br>
+			<label> Gender </label>
+			<input type="radio" name ="gender" value ="Male"> Male
+			<input type="radio" name ="gender" value ="Female"> Female
+			<input type="radio" name ="gender" value ="Other"> Other
+			<br><br>
+			<label> Address </label>
+			<textarea name ="address"></textarea>
+			<br><br>
+			<input type ="Submit" value="Register">
+			</form>-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+<!--
+<form action="register" method="post">
+<label>Name:</label>
+<input type="text" name="name">
+<br/><br/>
+<label>Email:</label>
+<input type="email" name="email">
+<br/><br/>
+<label>Password:</label>
+<input type="password" name="password">
+<br/><br/>
+<label>Phone Number:</label>
+<input type="number" name="phone">
+<br/><br/>
+<label>Gender:</label>
+M<input type="radio" name="gender" value="male">
+F<input type="radio" name="gender" value="female">
+O<input type="radio" name="gender" value="other">
+<br/><br/>
+<label>Address:</label>
+<textarea name="address"></textarea>
+<br/><br/>
+<input type="submit" value="REGISTER"/>
+</form> 
+ -->

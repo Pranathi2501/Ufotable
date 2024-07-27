@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ufotable - About Us!</title>
+
+	<link rel="icon" type="image/jpg" href="/images/logo.png">
+	
+		<style>
+		
+			html {
+			
+				background: #DFD3C3;
+				
+					}
+	
+			body {
+			
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				margin:8px;
+				
+					}
+	
+			header {
+			
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 1rem;
+				
+					}
+	
+			header h1 {
+			
+				margin: 0;
+				
+					}
+	
+			main {
+			
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 2rem;
+				
+					}
+	
+			.team-member {
+			
+				text-align: left;
+				
+					}
+	
+			.team-member img {
+			
+				width: 150px;
+				border-radius: 50%;
+				margin-bottom: 0.5rem;
+				
+					}
+	
+			.mentor img {
+			
+				height: 40px;
+				width: 150px;
+				border-radius: 50%;
+				margin-bottom: 0.5rem;
+				
+					}
+	
+			footer {
+			
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 1rem;
+				
+					}
+	
+			footer p {
+			
+				margin: 0;
+				
+					}
+	
+			.team-member img {
+			
+				max-width: 600px;
+				border-radius: 10%;
+				border: 5px solid #ccc;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+				margin-bottom: 10px;
+				
+					}
+	
+			.mentor img {
+				max-width: 600px;
+				border-radius: 10%;
+				border: 5px solid #ccc;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+				margin-bottom: 10px;
+				
+					}
+	
+			.img {
+			
+				display: flex;
+				justify-content: center;
+				align-items: center;
+	
+					}
+			
+			.container{
+			
+				margin-top: 30px;
+				
+					}
+		</style>
+		</head>
+		<body>
+		<div th:replace="navbar.html"></div>
+		<container class="container">
+		<main>
+		<section class="about">
+
+
+		</section>
+		<section class="team">
+
+
+			<div class="team-member">
+				<u>
+					<h1>
+						<p style="text-align: center">Mentor</p>
+					</h1>
+				</u>
+
+				<div class="img">
+				<img src="/images/ayushsir.png";alt="Mentor">	
+				</div>
+				<h3 style="text-align: center">AyushBalichwal</h3>
+				<h3 style="text-align: center">"Trainers don't just teach; they inspire their students to reach for the stars and beyond."</h3>
+			</div>
+			<hr>
+
+
+			<u>
+				<h2 style="text-align: center"> Developer </h2>
+			</u>
+
+
+			<div class="team-member">
+				<img src="/images/pranathi.jpg"  alt="Team Member 1">
+				<h3> Pranathi Yaramolu </h3>
+				<h3 style="margin-top:-25%;margin-left:15%;text-align: right;">"In the realm of code, developers are the
+					architects of possibilities,<br>
+					building the foundation for a digital world"</h5>
+					<p style="text-align: right;margin-top:5%;margin-left:40%;"> Full Stack Developer</p>
+					<br><br>
+			</div>
+			</section>
+			</container>
+</body>
+</html>

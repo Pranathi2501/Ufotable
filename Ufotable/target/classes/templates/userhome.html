@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Admin Home </title>
+<link rel="icon" type="image/jpg" href="/images/logo.png">
+		<style>
+		
+				body {
+					
+						font-family : Arial, sans-serif;
+						background:  #DFD3C3;
+				   		padding-bottom: 20px; 
+				    
+					}
+		
+				.container {
+				
+						text-align: center;
+						margin-top: 10px;
+						padding: 60px; /* Add padding to avoid overlapping with the navbar */
+						
+					}
+					
+					h1 {
+					
+						color:  #8D493A;
+		                animation: text-color-change 2s infinite; 
+						text-align : center;
+						
+					}
+		
+				.button-container {
+					
+						align-items:center;
+						
+					}
+		
+				.btn {
+				
+						align-items:center;
+						padding: 15px 20px;
+						font-size: 16px;
+						border: 1px solid #8D493A;
+						border-radius: 10px;
+						background: #8D493A;
+						color: white;
+						margin: 10px;
+						cursor: pointer;
+						align-items:center;
+					}
+			
+				.btn:hover {
+				
+					 	 background :  #AF8F6F;
+					 	 
+					}
+		
+				
+		
+				/* This is already included to remove underline and change text color */
+				.btn a {
+				
+						text-decoration: none;
+						color: white;
+					
+					}
+	
+		</style>
+		</head>
+	<body>
+		
+			<div th:replace="navbar.html"></div>
+			
+			<h1> Hello, <span th:text ="${user}"></span>!</h1>
+			<div class ="container">
+			<div class ="vu">
+				<h4> Explore Movies </h4>
+				<p> <span th:text ="${user}"></span> Click Here to check out the Latest Movies of your Choice.</p>
+				<div class="button-container">
+						<button class="btn" type="button">
+						<a href="exploremovie"> Explore Movie </a></button>
+				</div>
+			</div>
+			<div class ="vu">
+				<h4> Update Profile </h4>
+				<p> Click Here to Update your Profile</p>
+				<div class="button-container">
+						<button class="btn" type="button">
+						<a href="update"> Update Profile </a></button>
+					</div>
+			</div>
+			<div class ="vu">
+				<h4> Logout </h4>
+				<p> Click here to Logout </p>
+				<div class="button-container">
+						<button class="btn" type="button">
+						<a href ="logout"> Logout </a></button>
+				</div>
+			</div>
+			<div class ="vu">
+				<h4> Recent Hits </h4>
+				<p> Click Here to Watch Latest Hits (Membership Required!!)</p>
+				<div class="button-container">
+						<button class="btn" type="button">
+						<a href="exploremovie"> Watch Now </a></button>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
+
+
+
+
+
+
+
+<!-- <h2>Welcome to MovieFlix</h2>
+
+
+<a href="exploremovie">
+<input type="submit" value="Explore Movies"/>
+</a>
+
+ <a href ="updateuser">
+<input type ="submit" value="Update Profile"></a>
+		
+		<br> <br>
+
+<a href="logout">
+<input type="submit" value="Log Out"/>
+</a> -->

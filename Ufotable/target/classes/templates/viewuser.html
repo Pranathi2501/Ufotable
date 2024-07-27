@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>  Users List </title>
+<link rel="icon" type="image/jpg" href="/images/logo.png">
+		<style>
+		        body {
+		        
+		        	background:  #DFD3C3;
+		            font-family: Arial, sans-serif;
+		            margin: 0;
+		            padding: 0;
+		        }
+		
+		        header {
+		            
+		            background: #F8EDE3;
+		            text-align: center;
+		            padding: 10px 20px; /* Adjust the padding to make the header smaller */
+		            max-width: 1000px; /* Adjust the max-width as needed */
+		            margin: 0 auto; /* Center the header horizontally */
+		            border-radius: 30px;
+		        }
+		
+		        h2 {
+		            margin: 0;
+		        }
+		
+		        main {
+		            padding: 20px;
+		            display: flex;
+		            justify-content: center; /* Center the table horizontally */
+		        }
+		
+		        .user-table {
+		            width: 100%; /* Set the table width to 100% */
+		            max-width: 1000px; /* Add a maximum width for larger screens, same as header */
+		            margin: 0 auto; /* Center the table horizontally */
+		            border-collapse: collapse;
+		        }
+		
+		        .user-table th,
+		        .user-table td{
+		            padding: 10px;
+		            border: 1px solid #DEAC80;
+		            text-align: center;
+		        }
+		
+		        .user-table th {
+		            background-color: #8D493A;
+		            color: #ffffff; 
+		        }
+		
+		        .user-table tr:hover {
+		            background-color: #D0B8A8;
+		        }
+		
+		        .user-table a {
+		           background: #405D72; 		/* Set the default link color to blue */
+		            text-decoration: none;
+		            display: inline-block;
+		            padding: 5px 10px;
+		            border-radius: 5px;
+		        }
+		
+		        .user-table a:hover {
+		            background-color:#0E429D;
+		            color: #ffffff; /* Change the link color to white on hover */
+		        }
+		
+		        table {
+		            border-collapse: collapse;
+		            width: 100%;
+		        }
+		
+		        th,
+		        td {
+		            border: 1px solid black;
+		            padding: 8px;
+		            text-align: left;
+		        }
+		
+		        th {
+		            background:  #405D72; 	
+		        }
+		</style>
+</head>
+<body>
+			<div th:replace="navbar.html"></div>
+			<header>
+			<h2 th:text = "${'Existing Users'}"> </h2>
+			</header>
+			<main>
+			<table class ="user-table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Gender</th>
+					<th>Address</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user : ${user}">
+					<td th:text="${user.id}"></td>
+					<td th:text="${user.name}"></td>
+					<td th:text="${user.email}"></td>
+					<td th:text="${user.phone}"></td>
+					<td th:text="${user.gender}"></td>
+					<td th:text="${user.address}"></td>
+					
+			</tr>
+			</tbody>
+			</table>
+			</main>
+</body>
+</html>
+
+
+<!-- <h2>All Movies</h2>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>name</td>
+				<td>email</td>
+				<td>phone</td>
+				<td>gender</td>
+				<td>address</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="user : ${user}">
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.email}"></td>
+				<td th:text="${user.phone}"></td>
+				<td th:text="${user.gender}"></td>
+				<td th:text="${user.address}"></td>
+			</tr>
+		</tbody>
+	</table> -->

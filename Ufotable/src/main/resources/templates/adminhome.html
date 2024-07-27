@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Admin Home </title>
+<link rel="icon" type="image/jpg" href="/images/logo.png">
+			<style>
+			
+				
+				body {
+						
+						font-family : Arial, sans-serif;
+						background:  #DFD3C3;
+					    padding-bottom: 20px;
+					    
+				     
+						}
+		
+				.container {
+				
+						text-align: center;
+						margin-top: 50px;
+						padding: 20px; /* Add padding to avoid overlapping with the navbar */
+					
+						}
+						
+				h1 {
+				
+						color: #8D493A;
+		                animation: text-color-change 2s infinite; 
+						text-align : center;
+						padding-bottom : 20px;
+						
+						}
+		
+				.button-container {
+				
+						/*align-items:center;*/
+						margin-top : 30px;
+						
+						}
+		
+				.btn {
+				
+						padding: 15px 20px;
+						font-size: 16px;
+						border: 2px solid #8D493A;
+						border-radius: 10px;
+						background:  #8D493A;;
+						color: white;
+						margin: 10px;
+						cursor: pointer;
+						align-items:center;
+						
+						}
+		
+				.btn:hover {
+					
+						 background: #AF8F6F;
+						 
+						 
+						}
+		
+				.btn:focus {
+				
+						outline: none;
+					
+						}
+		
+				/* This is already included to remove underline and change text color */
+				.btn a {
+				
+						text-decoration: none;
+						color: white;
+					
+						}
+					
+		</style>
+		</head>
+		
+		
+	<body>
+		<div th:replace="navbar.html"></div>
+				<div class="container">
+				
+				<h1>Hello, Admin  <span th:text="${admin}"></span>!</h1>
+				
+				<div class ="vu">
+				
+				<h4> View Users </h4>
+				
+				<p> Admin, Click Here to check out the list of users</p>
+				
+				<div class="button-container">
+				
+						<button class="btn" type="button">
+						<a href="viewuser"> View Users </a></button>
+						
+				</div>
+				</div>
+				
+				<div class ="vu">
+				
+					<h4> View Users </h4>
+					
+					<p> Admin, Click Here to add New Movies</p>
+					
+					<div class="button-container">
+					
+							<button class="btn" type="button">
+							<a href="map-addmovie"> Add Movies </a></button>
+							
+					</div>
+				</div>
+				
+				<div class ="vu">
+				
+					<h4> View Users </h4>
+					
+					<p> Admin, Click Here to check out the list of Movies Added</p>
+					
+					<div class="button-container">
+					
+							<button class="btn" type="button">
+							<a href ="viewmovie"> View Added Movies </a></button>
+							
+					</div>
+				</div>
+				<div class ="vu">
+				
+					<h4> View Users </h4>
+					<p> Admin, Click Here to delete Movie Added</p>
+					
+					<div class="button-container">
+					
+							<button class="btn" type="button">
+							<a href ="deletemovie"> Delete Movie</a></button>
+							
+					</div>
+				</div>
+				
+				<div class ="vu">
+					<h4> Update Users </h4>
+					<p> Admin, Click Here to Update User</p>
+					
+					<div class="button-container">
+					
+							<button class="btn" type="button">
+							<a href ="update" method="post"> Update User</a></button>
+							
+					</div>
+				</div>
+				
+				<div class ="vu">
+
+					<h4> Delete Users </h4>
+					<p> Admin, Click Here to delete Existing User</p>
+					
+					<div class="button-container">
+					
+							<button class="btn" type="button">
+							<a href ="delete"> Delete User </a></button>
+							
+					</div>
+				</div>
+			</div>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <h2>Welcome admin</h2>
+
+<form action="viewuser">
+<input type="submit" value="View Users">
+</form>
+<br/><br/>
+
+<form action="map-addmovie">
+<input type="submit" value="Add Movie"/>
+</form>
+
+<a href="viewmovie">
+<input type="submit" value="View Movies"/>
+</a> -->
